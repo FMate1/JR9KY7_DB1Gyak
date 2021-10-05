@@ -5,22 +5,38 @@ import java.util.*;
 
 public class FMFileIr {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws IOException {
 		
-		System.out.println("Adja meg mennyi adatot szeretne iratni a txt-be (egesz szam): \n");
+		int adatdb= 0;
+		System.out.println("Adja meg hany db adatot szeretne megadni a txt-be. \n");
+		Scanner sc = new Scanner(System.in);
+	    adatdb = sc.nextInt();
+	    
+	    ArrayList <Integer> adatok = new ArrayList<Integer>();
 		
-		Scanner in = new Scanner(System.in);
-		int adatokDB = in.nextInt();
-		List adatok = new ArrayList();
-		
-		for (int i = 0; i < adatokDB; i++) {
-			System.out.println("Adja meg a(z)" + i+1 + ". darabot (egesz szam): \n");
-			adatok.add(in.nextInt());
+	    System.out.println("Adja meg a beolvasando adatokat! \n");
+	    for (int i = 0; i < adatdb; i++) {
+	    	
+	    	adatok.add(sc.nextInt());
 		}
-		
-		//File f = new File(kiirt.txt);
-
+	    File file = new File("adatok.txt");
+	    
+        if (!file.exists()) {
+        	
+            file.createNewFile();
+        }
+        FileWriter fw = new FileWriter(file);
+        BufferedWriter bw = new BufferedWriter(fw);
+        
+        for (int i = 0; i < adatok.size(); i++) {
+        	
+            bw.write(adatok.get(i).toString());
+        }
+        bw.flush();
+        bw.close();
+        
+        System.out.println("Az adatok masolasa megtortent.");
+	    
 	}
 
 }
