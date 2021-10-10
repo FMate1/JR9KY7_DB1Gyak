@@ -1,0 +1,5 @@
+A "Hallgató" és a "Könyv" egyedek között több-több (N:N) kapcsolat van, ez a "Használ" kapcsolat az ábrán.
+A "Könyv" és a "Könyvtár" egyedek között egy-több (1:N) kapcsolat van, "Könyv" (N) és "Könyvtár" (1).
+A "Könyv" és a "Szerző" egyedek között több-több (N:N) kapcsolat van.
+A "Könyvtár" és a "Campus" egyedek között egy-több (1:N) kopcsolat van. (Egy campuson több könyvtár is lehet, de egy könyvtár csak egy campuson lehet.) "Könyvtár" (N) és "Campus" (1)
+A "Szerző" egyedhez kötődik egy "EmailCím" attribútum, ami egy többértékű attribútum.
