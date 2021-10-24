@@ -1,0 +1,34 @@
+CREATE TABLE Tanfolyam (tkod INT PRIMARY KEY, ar INT, tipus CHAR, megnevezes CHAR);
+CREATE TABLE Resztvevo (tajszam INT PRIMARY KEY, nev CHAR, lakcim CHAR);
+CREATE TABLE TR(tkod INT, tajszam INT, FOREIGN KEY(tkod) REFERENCES Tanfolyam(tkod), FOREIGN KEY (tajszam) REFERENCES Resztvevo (tajszam), befizetes INT);
+
+
+Tanfolyam
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| tkod       | int(11) | NO   | PRI | NULL    |       |
+| ar         | int(11) | YES  |     | NULL    |       |
+| tipus      | char(1) | YES  |     | NULL    |       |
+| megnevezes | char(1) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+
+
+Resztvevo
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| tajszam | int(11) | NO   | PRI | NULL    |       |
+| nev     | char(1) | YES  |     | NULL    |       |
+| lakcim  | char(1) | YES  |     | NULL    |       |
++---------+---------+------+-----+---------+-------+
+
+
+TR
++-----------+---------+------+-----+---------+-------+
+| Field     | Type    | Null | Key | Default | Extra |
++-----------+---------+------+-----+---------+-------+
+| TKOD      | int(11) | YES  | MUL | NULL    |       |
+| TAJSZAM   | int(11) | YES  | MUL | NULL    |       |
+| BEFIZETES | int(11) | YES  |     | NULL    |       |
++-----------+---------+------+-----+---------+-------+

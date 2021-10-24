@@ -1,0 +1,15 @@
+INSERT INTO TERMEKEK VALUES(1,'LAPÁT',2000,'K1');
+INSERT INTO TERMEKEK VALUES(2,'SEPRŰ',4000,'K1');
+INSERT INTO TERMEKEK VALUES(3,'MOSOGATÓ GÉL',1500,'K2');
+INSERT INTO TERMEKEK VALUES(4,'SZAPPAN',1000,'K2');
+INSERT INTO TERMEKEK VALUES(5,'POHÁR',2400,'K3');
+
++------+--------------+------+-----------+
+| tkod | nev          | ear  | kategoria |
++------+--------------+------+-----------+
+|    1 | LAPÁT        | 2000 | K1        |
+|    2 | SEPRŰ        | 4000 | K1        |
+|    3 | MOSOGATÓ GÉL | 1500 | K2        |
+|    4 | SZAPPAN      | 1000 | K2        |
+|    5 | POHÁR        | 2400 | K3        |
++------+--------------+------+-----------+

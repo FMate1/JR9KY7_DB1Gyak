@@ -1,0 +1,11 @@
+MariaDB [JR9KY7]> INSERT INTO termekek VALUES (1,'lapát',2000, 'K1');
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+MariaDB [JR9KY7]> INSERT INTO termekek VALUES (8, NULL, 4000, 'K1');
+ERROR 1048 (23000): Column 'nev' cannot be null
+MariaDB [JR9KY7]> INSERT INTO TERMEKEK VALUES(15,'POHÁR A',0,'K3');
+ERROR 4025 (23000): CONSTRAINT `termekek.ear` failed for `jr9ky7`.`termekek`
+MariaDB [JR9KY7]> INSERT INTO TERMEKEK VALUES(15,"POHÁR A",20,'K3');
+Query OK, 1 row affected (0.024 sec)
+
+MariaDB [JR9KY7]> INSERT INTO TERMEKEK VALUES(15,'POHÁR A','20','K3');
+ERROR 1062 (23000): Duplicate entry '15' for key 'PRIMARY'

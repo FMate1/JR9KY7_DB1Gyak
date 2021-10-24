@@ -1,0 +1,22 @@
+CREATE TABLE TERMEK (tkod INT PRIMARY KEY, nev CHAR (50));
+
++-----------+----------+------+-----+---------+-------+
+| Field     | Type     | Null | Key | Default | Extra |
++-----------+----------+------+-----+---------+-------+
+| adoszam   | int(11)  | NO   | PRI | NULL    |       |
+| nev       | char(30) | YES  |     | NULL    |       |
+| telephely | char(1)  | YES  |     | NULL    |       |
++-----------+----------+------+-----+---------+-------+
+
+
+
+CREATE TABLE TERMEK (TKOD INT PRIMARY KEY, NEV CHAR (50), EAR INT CHECK (EAR > 0), GYARTO_ID INT, FOREIGN KEY (GYARTO_ID) REFERENCES gyarto(adoszam));
+
++-----------+----------+------+-----+---------+-------+
+| Field     | Type     | Null | Key | Default | Extra |
++-----------+----------+------+-----+---------+-------+
+| TKOD      | int(11)  | NO   | PRI | NULL    |       |
+| NEV       | char(50) | YES  |     | NULL    |       |
+| EAR       | int(11)  | YES  |     | NULL    |       |
+| GYARTO_ID | int(11)  | YES  | MUL | NULL    |       |
++-----------+----------+------+-----+---------+-------+

@@ -1,0 +1,58 @@
+ALTER TABLE Gyarto ADD irsz CHAR (4);
+ALTER TABLE Gyarto ADD varos CHAR (40);
+ALTER TABLE Gyarto ADD utca CHAR (100);
+
+CREATE TABLE Egysegek (aru INT, FOREIGN KEY (aru) REFERENCES Termek(tkod), db INT CHECK (db > 0));
+CREATE TABLE Alkatresz (akod INT PRIMARY KEY, nev CHAR (50));
+CREATE TABLE Komponens (termek INT, alkatresz INT, FOREIGN KEY (termek) REFERENCES Termek(tkod), FOREIGN KEY (alkatresz) REFERENCES Alkatresz (akod));
+
+GYARTO tábla
+
++-----------+-----------+------+-----+---------+-------+
+| Field     | Type      | Null | Key | Default | Extra |
++-----------+-----------+------+-----+---------+-------+
+| adoszam   | int(11)   | NO   | PRI | NULL    |       |
+| nev       | char(30)  | YES  |     | NULL    |       |
+| telephely | char(1)   | YES  |     | NULL    |       |
+| irsz      | char(4)   | YES  |     | NULL    |       |
+| varos     | char(40)  | YES  |     | NULL    |       |
+| utca      | char(100) | YES  |     | NULL    |       |
++-----------+-----------+------+-----+---------+-------+
+
+TERMEK tábla
+
++-----------+----------+------+-----+---------+-------+
+| Field     | Type     | Null | Key | Default | Extra |
++-----------+----------+------+-----+---------+-------+
+| TKOD      | int(11)  | NO   | PRI | NULL    |       |
+| NEV       | char(50) | YES  |     | NULL    |       |
+| EAR       | int(11)  | YES  |     | NULL    |       |
+| GYARTO_ID | int(11)  | YES  | MUL | NULL    |       |
++-----------+----------+------+-----+---------+-------+
+
+EGYSEGEK tábla
+
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| aru   | int(11) | YES  | MUL | NULL    |       |
+| db    | int(11) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+
+ALKATRESZ tábla
+
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| akod  | int(11)  | NO   | PRI | NULL    |       |
+| nev   | char(50) | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+
+KOMPONENS tábla
+
++-----------+---------+------+-----+---------+-------+
+| Field     | Type    | Null | Key | Default | Extra |
++-----------+---------+------+-----+---------+-------+
+| termek    | int(11) | YES  | MUL | NULL    |       |
+| alkatresz | int(11) | YES  | MUL | NULL    |       |
++-----------+---------+------+-----+---------+-------+
