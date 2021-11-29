@@ -1,0 +1,7 @@
+CREATE TABLE Oktato (neptunkod char(6) primary key, nev char(50), tanszék char(30));
+
+CREATE TABLE Hallgato (neptunkod char(6) primary key, nev char(50), tankor char (30), szul_d date, eletkor int, irszam int, varos char(50), utca char(50), hsz int);
+
+CREATE TABLE Targy (kod char(10) primary key, kredit int, megnevezes char(30), neptunkod char(6), FOREIGN KEY (neptunkod) REFERENCES Oktato(neptunkod));
+
+CREATE TABLE Hallgat (felev int, vizsgajegy int, kod char(10), neptunkod char(6), FOREIGN KEY (kod) REFERENCES Targy(kod), FOREIGN KEY (neptunkod) REFERENCES Hallgato(neptunkod));

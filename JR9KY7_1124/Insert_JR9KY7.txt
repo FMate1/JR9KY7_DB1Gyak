@@ -1,0 +1,35 @@
+INSERT INTO Oktato VALUES ('UZM555', 'Kovacs Mark', 'AIF');
+
+INSERT INTO Oktato VALUES ('HELL66', 'Kovacs Arpad', 'AIF');
+
+INSERT INTO Oktato VALUES ('GHZ65K', 'Szabo Laszlo', 'KNT');
+
+
+INSERT INTO Targy VALUES ('GEIK12B', 5, 'Oracle', 'UZM555');
+
+INSERT INTO Targy VALUES ('GEEE96B', 6, 'XML', 'HELL66');
+
+INSERT INTO Targy VALUES ('BOLCS23', 2, 'Olvasas', 'HELL66');
+
+
+
+INSERT INTO Hallgato VALUES ('JR9KY7', 'Fekete Mate', 'G1BI1', '2001-11-21', 20, 3700, 'Kazincbarcika', 'Alma utca', 10);
+
+INSERT INTO Hallgato VALUES ('ASNQPH', 'Bartok-Balog Peter', 'G1BI1', '2001-05-27', 20, 3700, 'Kazincbarcika', 'Alma utca', 11);
+
+INSERT INTO Hallgato VALUES ('GHJ566', 'Eros Bela', 'G1BI2', '2000-04-17', 21, 3711, 'Miskolc', 'Korte utca', 15);
+
+INSERT INTO Hallgato VALUES ('BC78PO', 'Kemegy Jozsef', 'G1BI3', '2000-01-05', 21, 3711, 'Miskolc', 'Szilva utca', 30);
+
+
+INSERT INTO Hallgat VALUES (1, 5, 'GEIK12B', 'JR9KY7');
+
+INSERT INTO Hallgat VALUES (1, 5, 'GEEE96B', 'ASNQPH');
+
+INSERT INTO Hallgat VALUES (2, 3, 'BOLCS23', 'GHJ566');
+
+INSERT INTO Hallgat VALUES (1, 4, 'BOLCS23', 'BC78PO');
+
+INSERT INTO Hallgat VALUES (1, 4, 'GEEE96B', 'BC78PO');
+
+INSERT INTO Hallgat VALUES (1, 4, 'GEIK12B', 'BC78PO');
