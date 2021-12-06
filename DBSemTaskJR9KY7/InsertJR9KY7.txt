@@ -1,0 +1,235 @@
+INSERT ASZTAL
+
+INSERT INTO Asztal VALUES (1, 6, 0, FALSE);
+
+INSERT INTO Asztal VALUES (2, 2, 1, TRUE);
+
+INSERT INTO Asztal VALUES (3, 2, 1, TRUE);
+
+INSERT INTO Asztal VALUES (4, 10, 0, FALSE);
+
+INSERT INTO Asztal VALUES (5, 4, 0, TRUE);
+
+INSERT INTO Asztal VALUES (6, 4, 1, TRUE);
+
+INSERT INTO Asztal VALUES (7, 8, 0, FALSE);
+
+INSERT INTO Asztal VALUES (8, 4, 0, FALSE);
+
+INSERT INTO Asztal VALUES (9, 2, 1, TRUE);
+
+INSERT INTO Asztal VALUES (10, 2, 1, TRUE);
+
+INSERT INTO Asztal VALUES (11, 8, 0, TRUE);
+
+
+-------------------------------------------------------------------------------------------------------
+
+INSERT RENDELES
+
+INSERT INTO Rendeles VALUES (1, 2, 4, 3000, 500, 2);
+
+INSERT INTO Rendeles VALUES (2, 2, 2, 5000, 600, 3);
+
+INSERT INTO Rendeles VALUES (3, 0, 4, 0, 800, 5);
+
+INSERT INTO Rendeles VALUES (4, 4, 0, 2800, 0, 6);
+
+INSERT INTO Rendeles VALUES (5, 0, 4, 0, 1300, 9);
+
+INSERT INTO Rendeles VALUES (6, 2, 6, 10000, 750, 10);
+
+INSERT INTO Rendeles VALUES (7, 8, 12, 4600, 750, 11);
+
+
+-------------------------------------------------------------------------------------------------------
+
+INSERT PINCER
+
+INSERT INTO Pincer VALUES (1, 'Szabo Laszlo', 320000, 36, 2);
+
+INSERT INTO Pincer VALUES (2, 'Szabo Laszlo', 320000, 36, 3);
+
+INSERT INTO Pincer VALUES (3, 'Kovacs Istvan', 230000, 27, 5);
+
+INSERT INTO Pincer VALUES (4, 'Kovacs Istvan', 230000, 27, 6);
+
+INSERT INTO Pincer VALUES (5, 'Lukacs Balazs', 260000, 21, 9);
+
+INSERT INTO Pincer VALUES (6, 'Lukacs Balazs', 260000, 21, 10);
+
+
+-------------------------------------------------------------------------------------------------------
+
+INSERT HOZZAVALOK
+
+INSERT INTO Hozzavalo VALUES (1, 'teszta', 20, 'gluten');
+
+INSERT INTO Hozzavalo VALUES (2, 'tej', 20, 'laktoz');
+
+INSERT INTO Hozzavalo VALUES (3, 'vaj', 32, 'laktoz');
+
+INSERT INTO Hozzavalo VALUES (4, 'liszt', 32, 'gluten');
+
+INSERT INTO Hozzavalo VALUES (5, 'liszt', 15, NULL);
+
+INSERT INTO Hozzavalo VALUES (6, 'marhahus', 23, NULL);
+
+INSERT INTO Hozzavalo VALUES (7, 'csirkehus', 35, NULL);
+
+INSERT INTO Hozzavalo VALUES (8, 'vadhus', 27, NULL);
+
+INSERT INTO Hozzavalo VALUES (9, 'rizs', 36, NULL);
+
+INSERT INTO Hozzavalo VALUES (10, 'burgonya', 21, NULL);
+
+INSERT INTO Hozzavalo VALUES (11, 'alkohol', 70, NULL);
+
+INSERT INTO Hozzavalo VALUES (12, 'alkohol mentes', 70, NULL);
+
+-------------------------------------------------------------------------------------------------------
+
+INSERT TARTALMAZ
+
+INSERT INTO Tartalmaz VALUES (1, 1);
+
+INSERT INTO Tartalmaz VALUES (1, 3);
+
+INSERT INTO Tartalmaz VALUES (1, 4);
+
+INSERT INTO Tartalmaz VALUES (1, 7);
+
+INSERT INTO Tartalmaz VALUES (1, 9);
+
+INSERT INTO Tartalmaz VALUES (1, 12);
+
+INSERT INTO Tartalmaz VALUES (2, 8);
+
+INSERT INTO Tartalmaz VALUES (2, 10);
+
+INSERT INTO Tartalmaz VALUES (2, 11);
+
+INSERT INTO Tartalmaz VALUES (3, 11);
+
+INSERT INTO Tartalmaz VALUES (3, 12);
+
+INSERT INTO Tartalmaz VALUES (4, 1);
+
+INSERT INTO Tartalmaz VALUES (4, 3);
+
+INSERT INTO Tartalmaz VALUES (4, 7);
+
+INSERT INTO Tartalmaz VALUES (4, 9);
+
+INSERT INTO Tartalmaz VALUES (4, 2);
+
+INSERT INTO Tartalmaz VALUES (5, 11);
+
+INSERT INTO Tartalmaz VALUES (6, 12);
+
+INSERT INTO Tartalmaz VALUES (6, 11);
+
+INSERT INTO Tartalmaz VALUES (6, 10);
+
+INSERT INTO Tartalmaz VALUES (6, 8);
+
+INSERT INTO Tartalmaz VALUES (6, 5);
+
+INSERT INTO Tartalmaz VALUES (6, 9);
+
+INSERT INTO Tartalmaz VALUES (6, 7);
+
+INSERT INTO Tartalmaz VALUES (7, 3);
+
+INSERT INTO Tartalmaz VALUES (7, 4);
+
+INSERT INTO Tartalmaz VALUES (7, 6);
+
+INSERT INTO Tartalmaz VALUES (7, 7);
+
+INSERT INTO Tartalmaz VALUES (7, 8);
+
+INSERT INTO Tartalmaz VALUES (7, 9);
+
+INSERT INTO Tartalmaz VALUES (7, 10);
+
+INSERT INTO Tartalmaz VALUES (7, 11);
+
+INSERT INTO Tartalmaz VALUES (7, 12);
+
+
+-------------------------------------------------------------------------------------------------------
+
+INSERT KONYHAI ALKALMAZOTT
+
+INSERT INTO Konyhai_Alkalmazott VALUES (1, 'Dobos Norbert', 870000, 38);
+
+INSERT INTO Konyhai_Alkalmazott VALUES (2, 'Szoboszlai Dominik', 340000, 29);
+
+INSERT INTO Konyhai_Alkalmazott VALUES (3, 'Vallai Balint', 310000, 22);
+
+INSERT INTO Konyhai_Alkalmazott VALUES (4, 'Balogh Geza', 326000, 25);
+
+INSERT INTO Konyhai_Alkalmazott VALUES (5, 'Kovacs Noemi', 378000, 24);
+
+INSERT INTO Konyhai_Alkalmazott VALUES (6, 'Foldi Anita', 248000, 20);
+
+INSERT INTO Konyhai_Alkalmazott VALUES (7, 'Kiss Bela', 248000, 19);
+
+INSERT INTO Konyhai_Alkalmazott VALUES (8, 'Nagy Andras', 248000, 21);
+
+
+-------------------------------------------------------------------------------------------------------
+
+INSERT POZICIO
+
+INSERT INTO Pozicio VALUES (TRUE, FALSE, FALSE, 1);
+
+INSERT INTO Pozicio VALUES (FALSE, TRUE, FALSE, 2);
+
+INSERT INTO Pozicio VALUES (FALSE, TRUE, FALSE, 3);
+
+INSERT INTO Pozicio VALUES (FALSE, TRUE, FALSE, 4);
+
+INSERT INTO Pozicio VALUES (FALSE, TRUE, FALSE, 5);
+
+INSERT INTO Pozicio VALUES (FALSE, FALSE, TRUE, 6);
+
+INSERT INTO Pozicio VALUES (FALSE, FALSE, TRUE, 7);
+
+INSERT INTO Pozicio VALUES (FALSE, FALSE, TRUE, 8);
+
+
+-------------------------------------------------------------------------------------------------------
+
+INSERT ELKESZIT
+
+INSERT INTO Elkeszit VALUES (45, FALSE, TRUE, TRUE, FALSE, 1, 2);
+
+INSERT INTO Elkeszit VALUES (47, FALSE, FALSE, TRUE, TRUE, 2, 3);
+
+INSERT INTO Elkeszit VALUES (47, FALSE, FALSE, TRUE, TRUE, 2, 1);
+
+INSERT INTO Elkeszit VALUES (12, FALSE, FALSE, FALSE, FALSE, 3, 4);
+
+INSERT INTO Elkeszit VALUES (60, TRUE, TRUE, TRUE, TRUE, 4, 5);
+
+INSERT INTO Elkeszit VALUES (15, FALSE, FALSE, FALSE, FALSE, 5, 5);
+
+INSERT INTO Elkeszit VALUES (50, FALSE, TRUE, TRUE, TRUE, 6, 1);
+
+INSERT INTO Elkeszit VALUES (70, TRUE, TRUE, TRUE, FALSE, 7, 1);
+
+
+-------------------------------------------------------------------------------------------------------
+
+ALTER TABLE RENDELES
+
+ALTER TABLE Rendeles ADD vegosszeg int;
+
+
+-------------------------------------------------------------------------------------------------------
+
+UPDATE RENDELES
+
+UPDATE Rendeles SET vegosszeg = (etelDB * etelar) + (italDB * italar);

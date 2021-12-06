@@ -1,0 +1,19 @@
+1.)	SELECT nev, fizetes FROM Pincer GROUP BY nev;
+
+2.)	SELECT nev, kor, fizetes FROM Konyhai_Alkalmazott WHERE fizetes > 350000;
+
+3.)	SELECT nev, kor FROM Konyhai_Alkalmazott WHERE kor < 22;
+
+4.)	SELECT AVG(vegosszeg) FROM Rendeles;
+
+5.)	SELECT Asztal.asztalszam, Rendeles.vegosszeg FROM Asztal INNER JOIN Rendeles ON Asztal.asztalszam = Rendeles.asztalszam;
+
+6.)	SELECT rendelesszam, vegosszeg FROM Rendeles WHERE rendelesszam IN (SELECT rendelesszam FROM Tartalmaz WHERE hozzavaloID = (SELECT hozzavaloID FROM Hozzavalo WHERE nev = 'tej'));
+
+7.)	SELECT Asztal.asztalszam, Asztal.ferohely, Asztal.emelet, Rendeles.rendelesszam, Rendeles.vegosszeg FROM Asztal INNER JOIN Rendeles ON Asztal.asztalszam = Rendeles.asztalszam WHERE Asztal.asztalszam IN (SELECT Pincer.asztalszam FROM Pincer WHERE Pincer.fizetes = (SELECT MAX(fizetes) FROM Pincer));
+
+8.)	SELECT rendelesszam, vegosszeg FROM Rendeles WHERE rendelesszam IN (SELECT rendelesszam FROM Elkeszit WHERE k_alkalmazottID = (SELECT k_alkalmazottID FROM Konyhai_Alkalmazott WHERE k_alkalmazottID = (SELECT k_alkalmazottID FROM Pozicio WHERE konyhafonok = 1)));
+
+9.)	SELECT COUNT(k_alkalmazottID) AS Vadhust_keszito_segit_DB FROM Pozicio WHERE k_alkalmazottID IN (SELECT k_alkalmazottID FROM Elkeszit WHERE Elkeszit.rendelesszam IN (SELECT rendelesszam FROM Tartalmaz WHERE hozzavaloID = (SELECT hozzavaloID FROM Hozzavalo WHERE nev = 'vadhus')) GROUP BY k_alkalmazottID) AND seged = 1;
+
+10.)	SELECT Pincer.nev, Pincer.kor, Asztal.asztalszam, Asztal.ferohely, Asztal.emelet FROM Asztal INNER JOIN Pincer ON Asztal.asztalszam = Pincer.asztalszam WHERE Asztal.asztalszam IN (SELECT rendelesszam FROM Elkeszit WHERE k_alkalmazottID = (SELECT k_alkalmazottID FROM Pozicio WHERE konyhafonok = 1));

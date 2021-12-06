@@ -1,0 +1,15 @@
+CREATE TABLE Asztal (asztalszam int primary key, ferohely int check(ferohely > 1), emelet int check(emelet >= 0), foglalt boolean default FALSE);
+
+CREATE TABLE Rendeles (rendelesszam int primary key, etelDB int check(etelDB >= 0), italDB int check(italDB >= 0), etelar int check(etelar >= 0), italar int check(italar >= 0), asztalszam int, foreign key (asztalszam) references Asztal(asztalszam));
+
+CREATE TABLE Pincer (pincerID int primary key, nev varchar(35), fizetes int check(fizetes > 200000), kor int check(kor >= 18), asztalszam int, foreign key (asztalszam) references Asztal(asztalszam));
+
+CREATE TABLE Hozzavalo (hozzavaloID int primary key, nev varchar(30), darabszam int check(darabszam >= 0), allergen varchar(20));
+
+CREATE TABLE Tartalmaz (rendelesszam int, hozzavaloID int, foreign key (rendelesszam) references Rendeles(rendelesszam), foreign key (hozzavaloID) references Hozzavalo(hozzavaloID));
+
+CREATE TABLE Konyhai_alkalmazott (k_alkalmazottID int primary key, nev varchar(35), fizetes int check(fizetes > 200000), kor int check(kor >= 18));
+
+CREATE TABLE Elkeszit (ido int check(ido > 10), rantas boolean default FALSE, sutes boolean default FALSE, fozes boolean default FALSE, nyersen boolean default FALSE, rendelesszam int, k_alkalmazottID int, foreign key (rendelesszam) references Rendeles(rendelesszam ), foreign key (k_alkalmazottID) references Konyhai_alkalmazott(k_alkalmazottID));
+
+CREATE TABLE Pozicio (konyhafonok boolean default FALSE, seged boolean default FALSE, mosogato boolean default FALSE, k_alkalmazottID int, foreign key (k_alkalmazottID) references Konyhai_alkalmazott(k_alkalmazottID));
